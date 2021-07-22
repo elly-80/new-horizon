@@ -1,0 +1,48 @@
+import java.awt.*;
+import javax.swing.*;
+
+class CalculatorAssignment extends JFrame
+{
+	//Declare all objects
+	JLabel lbValue1, lbValue2;
+	JTextField txtValue1,txtValue2;
+	JButton btnPlus, btnMinus, btnMultiply, btnDivision, btnResult;
+	
+	public CalculatorAssignment()
+	{
+		
+		//Create or Initialize all objects
+		JLabel lbValue1 = new JLabel("Enter Value 1 ");
+		JTextField txtValue1 = new JTextField(10);
+		lbValue1.setLabelFor(lbValue1);
+		JLabel lbValue2 = new JLabel("Enter Value 2 ");
+		JTextField txtValue2 = new JTextField(10);
+		lbValue2.setLabelFor(lbValue2);
+
+		
+		
+		btnPlus = new JButton("+");
+		btnMinus = new JButton("-");
+		btnMultiply = new JButton("x");
+		btnDivision = new JButton("/");
+		btnResult = new JButton("Result");
+		
+		setLayout(new FlowLayout());
+		
+		//Add components to Frame		
+		add(lbValue1); add(txtValue1); add(lbValue2); 
+		add(txtValue2); add(btnPlus); add(btnMinus);
+		add(btnMultiply); add(btnDivision); add(btnResult);
+		
+	}
+
+	public static void main(String [] learn)
+	{
+		CalculatorAssignment cal = new CalculatorAssignment();
+		cal.setSize(250,300);
+		cal.setVisible(true);
+		cal.setResizable(false);
+		cal.setTitle("Simple Calculator ");
+		cal.setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}
+}
